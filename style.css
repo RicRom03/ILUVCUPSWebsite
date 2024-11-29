@@ -121,6 +121,7 @@ nav ul li a:hover {
     font-size: 2.5rem;
     color: #e91e63;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .gallery-container {
@@ -133,18 +134,23 @@ nav ul li a:hover {
 .gallery-item {
     text-align: center;
     width: 250px;
+    background-color: #fff; /* White background for each item */
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: slideUp 0.6s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
 .gallery-item img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .gallery-item p {
