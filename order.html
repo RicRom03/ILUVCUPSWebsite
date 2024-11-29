@@ -12,7 +12,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="in.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -24,7 +24,7 @@
         <h2>Order Your Custom Cup</h2>
         <p>Fill out the form below to place an order or inquire about custom cup designs:</p>
 
-        <form action="https://formspree.io/f/xpwzoqrg" method="POST">
+        <form action="https://formspree.io/f/xpwzoqrg" method="POST" enctype="multipart/form-data">
             <div>
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -36,6 +36,10 @@
             <div>
                 <label for="message">Custom Order Details:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div>
+                <label for="image">Upload Image (Optional):</label>
+                <input type="file" id="image" name="image" accept="image/*">
             </div>
             <div>
                 <button type="submit">Submit</button>
