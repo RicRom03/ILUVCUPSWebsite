@@ -1,0 +1,286 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff5f7; /* Light pink background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Smooth Transition for Hover Effects */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Header Navigation */
+header {
+    background-color: #e91e63; /* Pink color for the header */
+    color: white;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #f8bbd0; /* Lighter pink for hover effect */
+}
+
+/* Home Section */
+#home {
+    background-color: #f8bbd0; /* Soft pink background */
+    color: #333;
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #e91e63;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background-color: #ff80ab; /* Soft pink button */
+    padding: 15px 40px;
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.cta-button:hover {
+    background-color: #f06292; /* Darker pink */
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+    padding: 60px 20px;
+    animation: fadeInUp 1s ease-out;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 60px 20px;
+    background-color: #ffe4e1; /* Light pink background for gallery */
+    animation: fadeInUp 1s ease-out;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    color: #e91e63;
+    margin-bottom: 30px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+    width: 250px;
+    animation: slideUp 0.6s ease-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+/* Contact and Order Sections */
+#contact, #order {
+    background-color: #fff;
+    padding: 60px 20px;
+    animation: fadeInUp 1s ease-out;
+    text-align: center;
+}
+
+#contact h2, #order h2 {
+    font-size: 2.5rem;
+    color: #e91e63; /* Pink color */
+    margin-bottom: 20px;
+}
+
+#contact h3, #order h3 {
+    font-size: 1.8rem;
+    color: #e91e63;
+    margin-top: 20px;
+}
+
+#contact p, #order p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+#contact form, #order form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #ff80ab; /* Pink button */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f06292; /* Darker pink on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #e91e63;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Compatibility */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    form div {
+        margin-bottom: 15px;
+    }
+
+    button {
+        padding: 10px 25px;
+    }
+
+    #contact form, #order form {
+        max-width: 100%;
+    }
+}
